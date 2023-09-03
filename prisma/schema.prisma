@@ -25,6 +25,14 @@ model Workout {
   heartRateAvg      Int
   heartRateMax      Int
   heartRateZones     Int[]
+  calories      Int
+  duration      Float
+  distance      Float
+  feeling      Int
+  notes      String?
+  avgPace      Float
+  timeInZones     Float[]
+  elevationGain      Float
   user      User     @relation(fields: [userId], references: [id])
   userId    Int
   createdAt DateTime @default(now())
@@ -46,6 +54,8 @@ model Profile {
   heartRateMax      Int
   heartRateRest      Int
   weight      Float
+  height      Float
+  heartRateZones     Int[]
   user      User      @relation(fields: [userId], references: [id])
   userId    Int       @unique
   createdAt DateTime @default(now())

@@ -11,7 +11,7 @@ interface InputGroupProps {
 
 const InputGroup = ({name, type, label,placeholder, defaultValue }: InputGroupProps) => (
   <div className="w-full flex flex-col my-1">
-    <label htmlFor={name} className="text-left text-2xl text-slate-800/75 p-2">{label}</label>
+    <label htmlFor={name} className="text-left text-lg text-slate-800/75 p-2">{label}</label>
     <input
       id={name}
       type={type}
